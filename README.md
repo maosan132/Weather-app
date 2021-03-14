@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Weather app
 
-> One paragraph statement about the project.
+> This app works as a weather station. It shows several data concerning the weather of a requested city. It uses the API from https://openweathermap.org/. The purpose of this app is the practice of promises, asynchronous functions, API requesting and data fetching from external services. 
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,13 +10,19 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5
+- Bootstrap 4.6
+- Fontawesome 5
+- Javascript ES6
+- ES6 modules
+- Webpack
+- Async
+- Promises
+- API calls
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+
 
 
 ## Getting Started
@@ -41,19 +47,13 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Mauricio Santos**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- Github: [@maosan132](https://github.com/maosan132)
+- Twitter: [@maosan132](https://twitter.com/maosan132)
+- Linkedin: [maurisantos](https://www.linkedin.com/in/mauricsantos)
 
 ## 🤝 Contributing
 
