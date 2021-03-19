@@ -1,5 +1,5 @@
 {
-  "name": "Weather-app",
+  "name": "my-weather-app",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maosan132/Weather-app.git"
+    "url": "git+https://github.com/maosan132/my-weather-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maosan132/Weather-app/issues"
+    "url": "https://github.com/maosan132/my-weather-app/issues"
   },
-  "homepage": "https://github.com/maosan132/Weather-app#readme",
+  "homepage": "https://github.com/maosan132/my-weather-app#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.1.2",

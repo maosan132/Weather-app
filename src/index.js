@@ -1,8 +1,8 @@
 import { fetchData } from './fetch-data';
 
-document.getElementById('submit').addEventListener('click', fetchData);
+submit = document.getElementById('submit');
+submit.addEventListener('click', fetchData());
+
 window.addEventListener('keyup', (e) => {
-  if (e.key === 13) {
-    fetchData();
-  }
+  if (e.key === 13) fetchData();
 });
