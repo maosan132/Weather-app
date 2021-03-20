@@ -2,4 +2,4 @@ const renderData = () => {
 
 };
 
-export default renderData;
+export {renderData};

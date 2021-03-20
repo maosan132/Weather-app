@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fetch_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fetch-data */ \"./src/fetch-data.js\");\n\n\n\ndocument.getElementById('fetch').addEventListener('click', _fetch_data__WEBPACK_IMPORTED_MODULE_0__.fetchData);\n// window.addEventListener('keyup', (e) => {\n//   if (e.key === 13) {\n//     fetchData();\n//     console.log('enter');\n//   }\n// });\n\n//# sourceURL=webpack://my-weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fetch_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fetch-data */ \"./src/fetch-data.js\");\n\n\n\ndocument.querySelector('input').addEventListener('click', _fetch_data__WEBPACK_IMPORTED_MODULE_0__.fetchData);\n// window.addEventListener('keyup', (e) => {\n//   if (e.key === 13) {\n//     fetchData();\n//     console.log('enter');\n//   }\n// });\n\n//# sourceURL=webpack://my-weather-app/./src/index.js?");
 
 /***/ }),
 
