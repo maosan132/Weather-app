@@ -12,9 +12,8 @@ async function fetchWeather(location) {
     const weatherData = await response.json();
     console.log('json: ', weatherData);
     const data = {};
-
-    data.temp = Math.round(weatherData.list[0].main.temp);
-    data.tempFeelsLike = Math.round(weatherData.list[0].main.feels_like);
+    data.temp = Math.floor(weatherData.list[0].main.temp);
+    data.tempFeelsLike = Math.floor(weatherData.list[0].main.feels_like);
     data.humidity = weatherData.list[0].main.humidity;
     data.weatherDescription = weatherData.list[0].weather[0].description;// light rain
     data.weatherIcon = weatherData.list[0].weather[0].icon;
@@ -23,7 +22,6 @@ async function fetchWeather(location) {
     data.country = weatherData.city.country;
     data.sunrise = weatherData.city.sunrise;
     data.timezone = weatherData.city.timezone;
-
     console.log('data fetched: ', data);
     return data;
   } catch (error) {
@@ -31,21 +29,29 @@ async function fetchWeather(location) {
   }
 }
 
-async function fetchData() {
+const getDate = (sun, time) => {
+  const options = { weekday: 'long', hour: '2-digit', minute: '2-digit' };
+  const date = new Date((sun + time) * 1000);
 
+  const localTime = date.toLocaleDateString('en-US', options);
+  console.log(localTime);
+  return localTime;
+};
+
+async function fetchData() {
   console.log('inside fetchData');
   const location = document.querySelector('input').value;
-  console.log('location: ',location)
+  console.log('location: ', location);
   try {
     const data = await fetchWeather(location);
-    // const localTime = new Date((data.sunrise + data.timezone) * 1000);
-    // renderData(data, localTime);
+    const localTime = getDate(data.sunrise, data.timezone);
+    renderData(data, localTime);
   } catch (error) {
     console.log('error in fetchData()');
   }
   // location.value = '';
 }
 
-const dummy = () => { console.log('dummy function')};
+const dummy = () => { console.log('dummy function'); };
 
 export { dummy, fetchData };
