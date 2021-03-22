@@ -39,4 +39,4 @@ const setAttributes = (el, attrs) => {
   });
 };
 
-export { addDomElem };
+export { addDomElem, setAttributes };

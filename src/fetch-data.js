@@ -1,4 +1,5 @@
 import { renderData } from './render-data';
+import { input } from './index';
 
 async function fetchWeather(location) {
   const api = '1627b8ae6ced3746531173abad9b4d06';
@@ -39,17 +40,25 @@ const getDate = (sun, time) => {
 };
 
 async function fetchData() {
+  //if (!input.value) console.log('yay ',document.querySelector('input'););
   console.log('inside fetchData');
   const location = document.querySelector('input').value;
+  const flash = document.getElementById('flash');
+  flash.style.display = 'none';
   console.log('location: ', location);
-  try {
-    const data = await fetchWeather(location);
-    const localTime = getDate(data.sunrise, data.timezone);
-    renderData(data, localTime);
-    console.log('resolved: ');
-  } catch (error) {
-    console.log('error in fetchData()');
+  if (location.length > 3) {
+    try {
+      const data = await fetchWeather(location);
+      const localTime = getDate(data.sunrise, data.timezone);
+      renderData(data, localTime);
+    } catch (error) {
+      console.log('error in fetchData()');
+    }
+  } else {
+    flash.style.display = '';
+    flash.textContent = ' Error, city needs to be at least 4 chars'
   }
+
   // location.value = '';
 }
 

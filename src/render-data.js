@@ -12,12 +12,12 @@ const renderData = (data, localTime) => {
   const emptyBox = addDomElem('div', 'class', 'col');
   const data1Box = addDomElem('div', 'class', 'col');
   const icon = addDomElem('img', 'class', 'day');
-  const temp = addDomElem('p');
+  const temp = addDomElem('p', 'class', 'h1 display-1');
   const empty = addDomElem('p');
   const feels = addDomElem('p', 'class', 'text-left my-auto');
   const humid = addDomElem('p', 'class', 'text-left my-auto');
   const wind = addDomElem('p', 'class', 'text-left my-auto');
-  const city = addDomElem('p', 'class', 'text-right my-auto');
+  const city = addDomElem('p', 'class', 'text-right my-auto h6 display-6');
   const time = addDomElem('p', 'class', 'text-right my-auto');
   const desc = addDomElem('p', 'class', 'text-right my-auto');
 
