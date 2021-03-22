@@ -1,8 +1,7 @@
 import { fetchData } from './fetch-data';
-import { setAttributes } from './helper';
+import { setAttributes, autoFocus } from './helper';
 
-const input = document.querySelector('input');
-setAttributes(input, { required: '', autofocus: '' });
+autoFocus('input');
 
 document.getElementById('fetch').addEventListener('click', fetchData);
 
