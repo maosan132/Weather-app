@@ -53,10 +53,11 @@ async function fetchData() {
       renderData(data, localTime);
     } catch (error) {
       console.log('error in fetchData()');
+      flash.textContent = ' Error, No data about that location';
     }
   } else {
     flash.style.display = '';
-    flash.textContent = ' Error, city needs to be at least 4 chars'
+    flash.textContent = ' Error, city needs to be at least 4 chars';
   }
 
   // location.value = '';

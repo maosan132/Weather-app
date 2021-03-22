@@ -17,9 +17,9 @@ const renderData = (data, localTime) => {
   const feels = addDomElem('p', 'class', 'text-left my-auto');
   const humid = addDomElem('p', 'class', 'text-left my-auto');
   const wind = addDomElem('p', 'class', 'text-left my-auto');
-  const city = addDomElem('p', 'class', 'text-right my-auto h6 display-6');
-  const time = addDomElem('p', 'class', 'text-right my-auto');
-  const desc = addDomElem('p', 'class', 'text-right my-auto');
+  const city = addDomElem('p', 'class', 'text-right my-auto h4');
+  const time = addDomElem('p', 'class', 'text-right my-auto h5');
+  const desc = addDomElem('p', 'class', 'text-right my-auto h5');
 
   icon.src = `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
   temp.textContent = `${data.temp}°C`;
