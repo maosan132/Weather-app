@@ -13,12 +13,12 @@ async function fetchWeather(location) {
     console.log('json: ', weatherData);
     const data = {};
     data.temp = Math.floor(weatherData.list[0].main.temp);
-    data.tempFeelsLike = Math.floor(weatherData.list[0].main.feels_like);
+    data.feelsLike = Math.floor(weatherData.list[0].main.feels_like);
     data.humidity = weatherData.list[0].main.humidity;
     data.weatherDescription = weatherData.list[0].weather[0].description;// light rain
     data.weatherIcon = weatherData.list[0].weather[0].icon;
     data.windSpeed = weatherData.list[0].wind.speed;
-    data.name = weatherData.city.name;
+    data.city = weatherData.city.name;
     data.country = weatherData.city.country;
     data.sunrise = weatherData.city.sunrise;
     data.timezone = weatherData.city.timezone;
@@ -34,7 +34,7 @@ const getDate = (sun, time) => {
   const date = new Date((sun + time) * 1000);
 
   const localTime = date.toLocaleDateString('en-US', options);
-  console.log(localTime);
+  console.log('localTime: ', localTime);
   return localTime;
 };
 
@@ -46,6 +46,7 @@ async function fetchData() {
     const data = await fetchWeather(location);
     const localTime = getDate(data.sunrise, data.timezone);
     renderData(data, localTime);
+    console.log('resolved: ');
   } catch (error) {
     console.log('error in fetchData()');
   }
