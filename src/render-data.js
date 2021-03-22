@@ -11,7 +11,7 @@ const renderData = (data, localTime) => {
   const row2 = addDomElem('div', 'class', 'row');
   const iconBox = addDomElem('div', 'class', 'col');
   const tempBox = addDomElem('div', 'class', 'col');
-  const emptyBox = addDomElem('div', 'class', 'col');
+  const emptyBox = addDomElem('div', 'class', 'col d-none d-md-block');
   const data1Box = addDomElem('div', 'class', 'col');
   const icon = addDomElem('img', 'class', 'float-left');
   const temp = addDomElem('p', 'class', 'h1 display-1');
