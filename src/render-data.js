@@ -60,7 +60,7 @@ const changeBackground = (code) => {
       break;
     case '5':
       if (code === 500) {
-        bg.style.background = 'url("./500.jpg") center center / cover no-repeat';
+        bg.style.background = 'url("500.jpg") center center / cover no-repeat';
       } else if (code === 501) {
         bg.style.background = 'url("./501.jpg") center center / cover no-repeat';
       } else if (code === 502) {

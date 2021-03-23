@@ -1,0 +1,13 @@
+
+.call-to-action {
+  background: url('../dist/fondo-movie.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 88vh;
+}
+
+@media screen and (max-width: 600px) {
+  .call-to-action {
+    background: url('../dist/fondo-movil.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}

@@ -1,5 +1,6 @@
 import fetchData from './fetch-data';
 import { autoFocus } from './helper';
+import './style.css';
 
 autoFocus('input');
 
