@@ -2,11 +2,11 @@
 
 # Weather app
 
-> This app works as a weather station. It shows several data concerning the weather of a requested city. It uses the API from https://openweathermap.org/. The purpose of this app is the practice of promises, asynchronous functions, API requesting and data fetching from external services. 
+> This app works as a weather station with the current weather of specific location. It shows some data concerning the weather of the requested city. It uses the API from https://openweathermap.org/. The purpose of this app is the practice of promises, asynchronous functions, API requesting and data fetching from external services.
 
 ![screenshot](./app-screenshot.png)
 
-Additional features: When changing from city to city, the background changes as well with a view of the current city weather sky.
+Additional features: When changing from city to city, the background changes to a weather image of the current city's sky.
 
 ## Built With
 
@@ -37,6 +37,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone the repository
 - Install node on your computer and ensure that you have node modules
 - Install webpack and set it up using this [guide](https://webpack.js.org/guides/asset-management/#setup)
+- Go to [API provider and sign up for an API key](https://home.openweathermap.org/users/sign_up)
 - Test whether it is running well or not
 
 
