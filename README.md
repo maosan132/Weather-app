@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Additional features: When changing from city to city, the background changes as well with a view of the current city weather sky.
 
 ## Built With
 
@@ -22,29 +22,22 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-
-
+[Live Demo Link](http://mauriciosantos.paternit.com/io/myweatherapp/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
+To preview the site:
+
+- Go to live demo Uri
+- Use navigation on to to browse the site
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+- Clone the repository
+- Install node on your computer and ensure that you have node modules
+- Install webpack and set it up using this [guide](https://webpack.js.org/guides/asset-management/#setup)
+- Test whether it is running well or not
 
 
 ## Author
@@ -55,11 +48,10 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@maosan132](https://twitter.com/maosan132)
 - Linkedin: [maurisantos](https://www.linkedin.com/in/mauricsantos)
 
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
