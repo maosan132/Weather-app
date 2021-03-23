@@ -1,5 +1,7 @@
 import { renderData, changeBackground } from './render-data';
 
+const flash = document.getElementById('flash'); // for showing errors
+
 async function fetchWeather(location) {
   const api = '1627b8ae6ced3746531173abad9b4d06';
   const unit = 'metric';
@@ -23,7 +25,8 @@ async function fetchWeather(location) {
     data.timezone = weatherData.city.timezone;
     return data;
   } catch (error) {
-    console.log('error in weather data');
+    flash.style.display = '';
+    flash.textContent = ' Sorry, there was an error when fetching data';
   }
 }
 
@@ -36,8 +39,7 @@ const getDate = (sun, time) => {
 };
 
 async function fetchData() {
-  let location = document.querySelector('input').value;
-  const flash = document.getElementById('flash');
+  const location = document.querySelector('input').value;
   flash.style.display = 'none';
   if (location.length > 3) {
     try {
