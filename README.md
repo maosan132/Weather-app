@@ -4,7 +4,7 @@
 
 > This app works as a weather station. It shows several data concerning the weather of a requested city. It uses the API from https://openweathermap.org/. The purpose of this app is the practice of promises, asynchronous functions, API requesting and data fetching from external services. 
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app-screenshot.png)
 
 Additional features: When changing from city to city, the background changes as well with a view of the current city weather sky.
 
