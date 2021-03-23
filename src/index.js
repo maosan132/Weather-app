@@ -1,14 +1,10 @@
-import { fetchData } from './fetch-data';
-import { setAttributes, autoFocus } from './helper';
+import fetchData from './fetch-data';
+import { autoFocus } from './helper';
 
 autoFocus('input');
 
 document.getElementById('fetch').addEventListener('click', fetchData);
 
 window.addEventListener('keyup', (e) => {
-  console.log(e.key);
-  if (e.key === 'Enter') {
-    console.log('inside main');
-    fetchData();
-  }
+  if (e.key === 'Enter') fetchData();
 });

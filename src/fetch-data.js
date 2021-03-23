@@ -26,8 +26,9 @@ async function fetchWeather(location) {
     return data;
   } catch (error) {
     flash.style.display = '';
-    flash.textContent = ' Sorry, there was an error when fetching data';
+    flash.textContent = '👎 Sorry, there was an error when fetching data';
   }
+  return true;
 }
 
 const getDate = (sun, time) => {
@@ -49,14 +50,14 @@ async function fetchData() {
       renderData(data, localTime);
     } catch (error) {
       flash.style.display = '';
-      flash.textContent = ' Sorry, No data about that location';
+      flash.textContent = '👎 Sorry, No data about that location';
     }
   } else {
     flash.style.display = '';
-    flash.textContent = ' Sorry, city needs to be at least 4 chars';
+    flash.textContent = '👶 Sorry, city needs to be at least 4 chars';
   }
 
   document.querySelector('input').value = '';
 }
 
-export { fetchData };
+export default fetchData;

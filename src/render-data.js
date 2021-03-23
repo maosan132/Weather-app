@@ -51,7 +51,7 @@ const changeBackground = (code) => {
   const bg = document.querySelector('section');
   const wGroup = code.toString()[0];
 
-switch (wGroup) {
+  switch (wGroup) {
     case '2':
       bg.style.background = 'url("./200.jpg") center center / cover no-repeat';
       break;
@@ -90,6 +90,6 @@ switch (wGroup) {
       break;
     default:
       break;
-}
+  }
 };
 export { renderData, changeBackground };
