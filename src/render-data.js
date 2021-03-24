@@ -1,6 +1,6 @@
 import { addDomElem, autoFocus } from './helper';
 
-const renderData = (data, localTime, u) => {
+const renderData = (data, localTime) => {
   const newDataArea = document.querySelector('.container.mt-5');
   newDataArea.innerHTML = '';
   const mainRow = addDomElem('div', 'class', 'row justify-content-center rounded p-1 pb-4');

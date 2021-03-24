@@ -1,10 +1,10 @@
 import { renderData, changeBackground } from './render-data';
 
 const flash = document.getElementById('flash'); // for showing errors
-const unit = 'metric'; // imperial
 
-async function fetchWeather(location, u) {
+async function fetchWeather(location) {
   const api = '1627b8ae6ced3746531173abad9b4d06';
+  const unit = 'metric'; // imperial
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${unit}&APPID=${api}`,
@@ -42,7 +42,7 @@ const getDate = (sun, time) => {
 const convertToFahrenheit = () => {
   const button = document.getElementById('units-btn');
   const curUnit = document.getElementById('unitChar');
-  let celsValue = document.getElementById('value');
+  const celsValue = document.getElementById('value');
   let farhValue = Math.floor((celsValue.firstChild.textContent * (9 / 5)) + 32);
   button.addEventListener('click', () => {
     [curUnit.textContent, button.textContent] = [button.textContent, curUnit.textContent];
