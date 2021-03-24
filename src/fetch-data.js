@@ -1,10 +1,10 @@
 import { renderData, changeBackground } from './render-data';
 
 const flash = document.getElementById('flash'); // for showing errors
+const unit = 'metric'; // imperial
 
-async function fetchWeather(location) {
+async function fetchWeather(location, u) {
   const api = '1627b8ae6ced3746531173abad9b4d06';
-  const unit = 'metric';
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${unit}&APPID=${api}`,
@@ -39,6 +39,17 @@ const getDate = (sun, time) => {
   return localTime;
 };
 
+const convertToFahrenheit = () => {
+  const button = document.getElementById('units-btn');
+  const curUnit = document.getElementById('unitChar');
+  let celsValue = document.getElementById('value');
+  let farhValue = Math.floor((celsValue.firstChild.textContent * (9 / 5)) + 32);
+  button.addEventListener('click', () => {
+    [curUnit.textContent, button.textContent] = [button.textContent, curUnit.textContent];
+    [celsValue.firstChild.textContent, farhValue] = [farhValue, celsValue.firstChild.textContent];
+  });
+};
+
 async function fetchData() {
   const location = document.querySelector('input').value;
   flash.style.display = 'none';
@@ -56,7 +67,7 @@ async function fetchData() {
     flash.style.display = '';
     flash.textContent = '👶 Sorry, city needs to be at least 4 chars';
   }
-
+  convertToFahrenheit();
   document.querySelector('input').value = '';
 }
 

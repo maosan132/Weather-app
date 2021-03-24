@@ -1,21 +1,29 @@
 import { addDomElem, autoFocus } from './helper';
 
-const renderData = (data, localTime) => {
+const renderData = (data, localTime, u) => {
   const newDataArea = document.querySelector('.container.mt-5');
   newDataArea.innerHTML = '';
   const mainRow = addDomElem('div', 'class', 'row justify-content-center rounded p-1 pb-4');
   mainRow.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
   const col1 = addDomElem('div', 'class', 'col-md-6 col-lg-4');
-  const col2 = addDomElem('div', 'class', 'col col-lg-4 col-md-6');
+  const col2 = addDomElem('div', 'class', 'col col-lg-4 col-md-6 pt-2');
   const row1 = addDomElem('div', 'class', 'row');
   const row2 = addDomElem('div', 'class', 'row');
   const iconBox = addDomElem('div', 'class', 'col');
-  const tempBox = addDomElem('div', 'class', 'col');
+  const tempBox = addDomElem('div', 'class', 'col position-relative mr-2');
   const emptyBox = addDomElem('div', 'class', 'col d-none d-md-block');
   const data1Box = addDomElem('div', 'class', 'col');
+  const unitsBtn = addDomElem('div', 'class', 'position-absolute border rounded');
+  unitsBtn.setAttribute('role', 'button');
+  unitsBtn.setAttribute('title', 'Press to swith °C to °F');
+  unitsBtn.id = 'units-btn';
   const icon = addDomElem('img', 'class', 'float-left');
-  const temp = addDomElem('p', 'class', 'h1 display-1');
+  const temp = addDomElem('p', 'class', 'h1 display-1 mr-4');
+  temp.id = 'value';
   const empty = addDomElem('p');
+  const gradeChar = addDomElem('sup');
+  const unit = addDomElem('span');
+  unit.id = 'unitChar';
   const feels = addDomElem('p', 'class', 'text-left my-auto h5');
   const humid = addDomElem('p', 'class', 'text-left my-auto h5');
   const wind = addDomElem('p', 'class', 'text-left my-auto h5');
@@ -24,7 +32,10 @@ const renderData = (data, localTime) => {
   const desc = addDomElem('p', 'class', 'text-right my-auto h5');
 
   icon.src = `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
-  temp.textContent = `${data.temp}°C`;
+  temp.textContent = `${data.temp}`;
+  gradeChar.textContent = '°';
+  unit.textContent = 'C';
+  unitsBtn.textContent = 'F';
   feels.textContent = `Feels like: ${data.feelsLike}°C`;
   humid.textContent = `Humidity: ${data.humidity}%`;
   wind.textContent = `Wind: ${data.windSpeed} km/h`;
@@ -34,8 +45,9 @@ const renderData = (data, localTime) => {
 
   iconBox.appendChild(icon);
   tempBox.appendChild(temp);
+  temp.append(gradeChar, unit);
   emptyBox.appendChild(empty);
-  row1.append(iconBox, tempBox, emptyBox);
+  row1.append(unitsBtn, iconBox, tempBox, emptyBox);
   data1Box.append(feels, humid, wind);
   row2.appendChild(data1Box);
   col1.append(row1, row2);
@@ -45,7 +57,6 @@ const renderData = (data, localTime) => {
 
   autoFocus('input');
 };
-
 
 const changeBackground = (code) => {
   const bg = document.querySelector('section');

@@ -5,6 +5,26 @@
   min-height: 88vh;
 }
 
+#units-btn {
+  right: 5px;
+  top: 5px;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  z-index: 1000;
+}
+
+.h1 {
+  /*font-family: sans-serif;*/
+  letter-spacing: -4px;
+  /*font-size: 6em;*/
+  font-stretch: condensed;
+}
+
+sup {
+  font-size: 0.5em;
+}
+
 @media screen and (max-width: 600px) {
   .call-to-action {
     background: url('../dist/fondo-movil.jpg') no-repeat center center;
