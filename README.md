@@ -1,65 +1,58 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Weather app
 
-> One paragraph statement about the project.
+> This app works as a weather station with the current weather of specific location. It shows some data concerning the weather of the requested city. It uses the API from https://openweathermap.org/. The purpose of this app is the practice of promises, asynchronous functions, API requesting and data fetching from external services.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app-screenshot.png)
 
-Additional description about the project and its features.
+Additional features: When changing from city to city, the background changes to a weather image of the current city's sky.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5
+- Bootstrap 4.6
+- Fontawesome 5
+- Javascript ES6
+- ES6 modules
+- Webpack
+- Async
+- Promises
+- API calls
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](http://mauriciosantos.paternit.com/io/myweatherapp/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
+To preview the site:
+
+- Go to live demo Uri
+- Use navigation on to to browse the site
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- Clone the repository
+- Install node on your computer and ensure that you have node modules
+- Install webpack and set it up using this [guide](https://webpack.js.org/guides/asset-management/#setup)
+- Go to [API provider and sign up for an API key](https://home.openweathermap.org/users/sign_up)
+- Test whether it is running well or not
 
 
+## Author
 
-## Authors
+👤 **Mauricio Santos**
 
-👤 **Author1**
+- Github: [@maosan132](https://github.com/maosan132)
+- Twitter: [@maosan132](https://twitter.com/maosan132)
+- Linkedin: [maurisantos](https://www.linkedin.com/in/mauricsantos)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
